@@ -1,0 +1,72 @@
+:root {
+    /* Custom Color Palette */
+    --maroon-primary: #800020;
+    --maroon-dark: #5D0019;
+    --maroon-light: #A3133D;
+    --gold: #D4AF37;
+    --cream: #FDF5E6;
+}
+
+/* Custom Font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Custom Utility Classes */
+.bg-maroon-primary { background-color: var(--maroon-primary); }
+.bg-maroon-dark { background-color: var(--maroon-dark); }
+.bg-maroon-light { background-color: var(--maroon-light); }
+.bg-gold { background-color: var(--gold); }
+.bg-cream { background-color: var(--cream); }
+
+.text-maroon-primary { color: var(--maroon-primary); }
+.text-maroon-dark { color: var(--maroon-dark); }
+.text-maroon-light { color: var(--maroon-light); }
+.text-gold { color: var(--gold); }
+
+.border-maroon-primary { border-color: var(--maroon-primary); }
+.border-gold { border-color: var(--gold); }
+
+/* Hover States */
+.hover\:bg-maroon-dark:hover { background-color: var(--maroon-dark); }
+.hover\:bg-maroon-primary:hover { background-color: var(--maroon-primary); }
+.hover\:text-gold:hover { color: var(--gold); }
+
+/* Custom Font Utility */
+.font-cinzel {
+    font-family: 'Cinzel', serif;
+}
+
+/* Custom Gradients */
+.bg-gradient-maroon {
+    background: linear-gradient(to right, var(--maroon-primary), var(--maroon-dark));
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+  /* Show the booking form when the #booking section is targeted */
+  #booking:target {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+/* Hide the booking form when clicking close (goes to #close) */
+#close:target ~ #booking {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+    
